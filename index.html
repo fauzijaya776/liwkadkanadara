@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FZI STORE — Installer RDP & VPS Otomatis</title>
+<meta name="description" content="FZI STORE — layanan installer Windows RDP & VPS otomatis penuh via website. Deposit saldo instan lewat QRIS & Virtual Account. Tanpa ribet." />
+<meta name="theme-color" content="#070912" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="FZI STORE — Installer RDP & VPS Otomatis" />
+<meta property="og:description" content="Installer Windows RDP & VPS otomatis penuh via website. Deposit instan, proses cepat." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%237c5cff'/%3E%3Ctext x='50' y='68' font-size='54' font-family='Arial' font-weight='bold' fill='%23070912' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<!-- ============== NAVBAR ============== -->
+<header class="nav">
+  <div class="container nav-in">
+    <a href="#top" class="brand">
+      <span class="logo">F</span>
+      <span>FZI STORE<small>RDP · VPS INSTALLER</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#fitur">Fitur</a>
+      <a href="#katalog">Katalog</a>
+      <a href="#cara">Cara Kerja</a>
+      <a href="#deposit">Deposit</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <div class="balance-pill">
+        <div>
+          <span class="lbl">Saldo</span>
+          <span class="val" id="navBalance">Rp0</span>
+        </div>
+      </div>
+      <a href="#deposit" class="btn primary sm">Deposit</a>
+      <button class="hamb" id="hamb" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">● Sistem online 24 jam</span>
+      <h1>Installer <span class="grad">RDP &amp; VPS</span> Otomatis, Full via Website.</h1>
+      <p class="sub">Pasang Windows RDP di VPS kamu secara otomatis hanya dengan beberapa klik. Isi saldo, pilih paket, jalankan installer — semua langsung dari dashboard. Tanpa antre, tanpa chat manual.</p>
+      <div class="hero-cta">
+        <a href="#deposit" class="btn primary lg">Isi Saldo Sekarang</a>
+        <a href="#katalog" class="btn ghost lg">Lihat Katalog</a>
+      </div>
+      <div class="trust">
+        <div><b id="statInstall">12.480+</b> Instalasi selesai</div>
+        <div><b>±4 mnt</b> Rata-rata proses</div>
+        <div><b>99.9%</b> Uptime sistem</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="panel-card">
+        <div class="term">
+          <div class="term-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="term-title">fzi-installer — auto-deploy</span>
+          </div>
+          <div class="term-body">
+            <div><span class="c">$</span> fzi install --os win2022 --target 45.**.**.12</div>
+            <div class="m"># Menghubungkan ke VPS...</div>
+            <div class="g">✔ SSH terhubung</div>
+            <div class="g">✔ Verifikasi spesifikasi (2 vCPU · 4GB RAM)</div>
+            <div class="g">✔ Unduh image Windows Server 2022</div>
+            <div class="m"># Menulis image ke disk...</div>
+            <div class="progress"><i></i></div>
+            <div class="p">→ 82% · estimasi 47 detik</div>
+            <div class="m">RDP siap: 45.**.**.12:3389 · user: Administrator</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FITUR ============== -->
+<section class="section" id="fitur">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Kenapa FZI Store</span>
+      <h2 class="h2">Semua yang kamu butuh untuk deploy RDP.</h2>
+      <p class="lead">Dirancang untuk cepat dan mandiri. Kamu pegang kendali penuh lewat website.</p>
+    </div>
+    <div class="grid g3" style="margin-top:34px">
+      <div class="card reveal"><div class="ic">⚡</div><h3>Instalasi Otomatis</h3><p>Proses install Windows RDP berjalan otomatis setelah order dikonfirmasi. Rata-rata selesai di bawah 5 menit.</p></div>
+      <div class="card reveal"><div class="ic">🖥️</div><h3>Banyak Pilihan OS</h3><p>Windows Server 2012 s/d 2022, plus template siap pakai. Tinggal pilih sesuai kebutuhan.</p></div>
+      <div class="card reveal"><div class="ic">💳</div><h3>Deposit Instan</h3><p>Isi saldo via QRIS &amp; Virtual Account lewat Pakasir. Konfirmasi cepat, saldo langsung dipakai.</p></div>
+      <div class="card reveal"><div class="ic">🔒</div><h3>Aman &amp; Privat</h3><p>Kredensial hanya untuk kamu. Kami tidak menyimpan password RDP setelah instalasi selesai.</p></div>
+      <div class="card reveal"><div class="ic">📊</div><h3>Dashboard Riwayat</h3><p>Pantau saldo, job berjalan, dan riwayat instalasi dalam satu panel yang rapi.</p></div>
+      <div class="card reveal"><div class="ic">🌐</div><h3>100% via Website</h3><p>Tidak perlu aplikasi chat. Semua order, pembayaran, dan eksekusi dilakukan langsung di situs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== KATALOG ============== -->
+<section class="section" id="katalog">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Katalog Paket</span>
+      <h2 class="h2">Pilih paket, bayar dari saldo.</h2>
+      <p class="lead">Harga transparan. Semua paket termasuk instalasi otomatis + konfigurasi RDP siap pakai. <em>Harga bersifat contoh — mudah kamu ubah di HTML.</em></p>
+    </div>
+
+    <div class="grid g3 plans-grid" style="margin-top:36px">
+      <div class="plan reveal">
+        <span class="os">Windows RDP</span>
+        <h3>Starter</h3>
+        <div class="price">Rp15.000 <small>/ instalasi</small></div>
+        <ul>
+          <li>Windows Server 2019 / 2022</li>
+          <li>Cocok untuk 1–2 vCPU · 2GB RAM</li>
+          <li>Instalasi otomatis &lt; 5 menit</li>
+          <li>Bawa VPS sendiri (BYOV)</li>
+          <li>Panduan koneksi RDP</li>
+        </ul>
+        <a href="#deposit" class="btn block">Pilih Starter</a>
+      </div>
+
+      <div class="plan pop reveal">
+        <span class="tag">TERLARIS</span>
+        <span class="os">Windows RDP</span>
+        <h3>Pro</h3>
+        <div class="price">Rp25.000 <small>/ instalasi</small></div>
+        <ul>
+          <li>Windows Server 2016–2022</li>
+          <li>Optimasi untuk 2–4 vCPU · 4–8GB RAM</li>
+          <li>Tuning performa + auto-login</li>
+          <li>Prioritas antrean instalasi</li>
+          <li>Re-install gratis 1x / 24 jam</li>
+        </ul>
+        <a href="#deposit" class="btn primary block">Pilih Pro</a>
+      </div>
+
+      <div class="plan reveal">
+        <span class="os">VPS + RDP</span>
+        <h3>Bundle</h3>
+        <div class="price">Rp75.000 <small>/ bulan</small></div>
+        <ul>
+          <li>VPS + Windows RDP terinstall</li>
+          <li>4 vCPU · 8GB RAM · 80GB SSD</li>
+          <li>1 IP publik + akses full admin</li>
+          <li>Setup otomatis end-to-end</li>
+          <li>Dukungan via tiket website</li>
+        </ul>
+        <a href="#deposit" class="btn block">Pilih Bundle</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CARA KERJA ============== -->
+<section class="section" id="cara">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Cara Kerja</span>
+      <h2 class="h2">Empat langkah, RDP siap.</h2>
+    </div>
+    <div class="steps reveal" style="margin-top:34px">
+      <div class="step"><div class="n"></div><h4>Isi Saldo</h4><p>Deposit lewat QRIS / VA. Saldo masuk otomatis setelah pembayaran terverifikasi.</p></div>
+      <div class="step"><div class="n"></div><h4>Pilih Paket</h4><p>Tentukan OS &amp; paket sesuai spesifikasi VPS-mu, lalu masukkan data target.</p></div>
+      <div class="step"><div class="n"></div><h4>Sistem Install</h4><p>Installer otomatis menulis image &amp; mengonfigurasi RDP tanpa campur tangan manual.</p></div>
+      <div class="step"><div class="n"></div><h4>Konek RDP</h4><p>Dapatkan IP, user, &amp; port. Langsung remote desktop dari perangkat apa pun.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== DEPOSIT ============== -->
+<section class="section" id="deposit">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Top Up Saldo</span>
+      <h2 class="h2">Deposit &amp; langsung <span class="grad">checkout</span>.</h2>
+      <p class="lead">Pilih nominal cepat atau ketik manual, lalu tekan tombol deposit untuk menuju halaman pembayaran Pakasir (QRIS &amp; Virtual Account).</p>
+    </div>
+
+    <div class="deposit-wrap reveal" style="margin-top:34px">
+      <!-- Kiri: form deposit -->
+      <div class="deposit-box">
+        <label class="field-lbl">Nominal deposit</label>
+        <div class="amount-input">
+          <span class="rp">Rp</span>
+          <input type="text" id="amount" inputmode="numeric" placeholder="0" autocomplete="off" />
+        </div>
+
+        <label class="field-lbl">Nominal cepat</label>
+        <div class="quick" id="quick"></div>
+
+        <div class="err" id="err"></div>
+
+        <div class="summary">
+          <div class="row"><span>Nominal</span><b id="sumAmount">Rp0</b></div>
+          <div class="row"><span>Order ID</span><b id="sumOid">—</b></div>
+          <div class="row total"><span>Total bayar</span><b id="sumTotal" class="grad">Rp0</b></div>
+        </div>
+
+        <button class="btn primary block lg" id="depositBtn">Lanjut ke Pembayaran →</button>
+
+        <div class="pay-methods">
+          <span>Metode:</span>
+          <span class="chip">QRIS</span>
+          <span class="chip">BCA VA</span>
+          <span class="chip">BNI VA</span>
+          <span class="chip">BRI VA</span>
+          <span class="chip">Mandiri</span>
+        </div>
+        <p class="hint">Kamu akan diarahkan ke halaman pembayaran aman <b>Pakasir</b>. Saldo diperbarui setelah pembayaran berhasil.</p>
+      </div>
+
+      <!-- Kanan: info -->
+      <div class="info-list">
+        <div class="info-item"><div class="ic">🔐</div><div><h4>Pembayaran Terenkripsi</h4><p>Transaksi diproses oleh gateway resmi Pakasir. Kami tidak menyimpan detail pembayaranmu.</p></div></div>
+        <div class="info-item"><div class="ic">⚡</div><div><h4>Konfirmasi Cepat</h4><p>QRIS &amp; Virtual Account terverifikasi otomatis. Saldo langsung siap dipakai untuk order.</p></div></div>
+        <div class="info-item"><div class="ic">🧾</div><div><h4>Order ID Otomatis</h4><p>Setiap deposit punya Order ID unik untuk memudahkan pelacakan transaksi.</p></div></div>
+        <div class="info-item"><div class="ic">💬</div><div><h4>Dukungan via Website</h4><p>Ada kendala? Kirim tiket lewat halaman kontak. Tanpa perlu aplikasi chat.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">Pertanyaan yang sering diajukan.</h2>
+    </div>
+    <div class="faq reveal" style="margin-top:30px;max-width:820px">
+      <details open><summary>Apakah saya perlu VPS sendiri?</summary><p>Untuk paket RDP Starter &amp; Pro, ya — kamu menyediakan VPS (BYOV) lalu sistem kami menginstall Windows RDP otomatis. Untuk paket Bundle, VPS sudah termasuk.</p></details>
+      <details><summary>Bagaimana cara isi saldo?</summary><p>Buka bagian Deposit, pilih atau ketik nominal, lalu tekan "Lanjut ke Pembayaran". Kamu akan diarahkan ke halaman Pakasir untuk membayar via QRIS atau Virtual Account.</p></details>
+      <details><summary>Berapa lama proses instalasi?</summary><p>Rata-rata di bawah 5 menit setelah order dikonfirmasi, tergantung spesifikasi VPS dan OS yang dipilih.</p></details>
+      <details><summary>Metode pembayaran apa saja yang didukung?</summary><p>QRIS (semua e-wallet &amp; m-banking) dan Virtual Account berbagai bank melalui gateway Pakasir.</p></details>
+      <details><summary>Apakah ada garansi?</summary><p>Paket Pro mendapat re-install gratis 1x dalam 24 jam bila terjadi kendala instalasi dari sisi sistem.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA BAND ============== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Siap deploy RDP pertamamu?</h2>
+      <p>Isi saldo sekarang dan jalankan instalasi otomatis dalam hitungan menit.</p>
+      <a href="#deposit" class="btn primary lg">Mulai Deposit</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand"><span class="logo">F</span><span>FZI STORE<small>RDP · VPS INSTALLER</small></span></a>
+        <p>Layanan installer Windows RDP &amp; VPS otomatis, sepenuhnya via website. Cepat, mandiri, transparan.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h5>Produk</h5>
+          <a href="#katalog">Katalog</a>
+          <a href="#fitur">Fitur</a>
+          <a href="#deposit">Deposit</a>
+        </div>
+        <div class="foot-col">
+          <h5>Bantuan</h5>
+          <a href="#faq">FAQ</a>
+          <a href="#cara">Cara Kerja</a>
+          <a href="#" id="contactLink">Kontak</a>
+        </div>
+        <div class="foot-col">
+          <h5>Legal</h5>
+          <a href="#">Syarat Layanan</a>
+          <a href="#">Kebijakan Privasi</a>
+          <a href="#">Refund</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> FZI STORE · fzistore.my.id</span>
+      <span>Pembayaran didukung oleh Pakasir</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============== MODAL (redirect notice) ============== -->
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <div class="big">🚀</div>
+    <h3>Mengarahkan ke Pembayaran</h3>
+    <p>Deposit sebesar <b id="modalAmount">Rp0</b> akan diproses melalui Pakasir.</p>
+    <div class="oid" id="modalOid">—</div>
+    <a href="#" class="btn primary block lg" id="modalGo">Buka Halaman Bayar</a>
+    <button class="btn ghost block" id="modalCancel" style="margin-top:10px">Batal</button>
+  </div>
+</div>
+
+<script src="assets/config.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
