@@ -2,6 +2,16 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/callback",
+      "destination": "https://adakafaradahdnariadmaiwrandadsara-1-bkyv.onrender.com/callback"
+    },
+    {
+      "source": "/qrin/callback",
+      "destination": "https://adakafaradahdnariadmaiwrandadsara-1-bkyv.onrender.com/qrin/callback"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
